@@ -56,7 +56,7 @@ function initMap() {
       radius_km: Math.round(circle.getRadius() / 1000)
     };
 
-    document.getElementById('pos-output').innerHTML = JSON.stringify({ "geo": geo }, 0, 2);
+    document.getElementById('pos-output').innerHTML = '"geo": ' + JSON.stringify(geo, 0, 2);
   }
 
   google.maps.event.addListener(circle, 'radius_changed', updateOutput);
