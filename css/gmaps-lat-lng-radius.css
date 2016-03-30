@@ -12,7 +12,7 @@ html, body {
   border-radius: 2px 0 0 2px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  height: 32px;
+
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -26,6 +26,7 @@ html, body {
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 300px;
+  height: 32px;
 }
 
 #output-container {
@@ -36,11 +37,11 @@ html, body {
   margin-right: 12px;
   padding: 11px 11px 13px 13px;
   width: 250px;
-  height: 100px;
   position: relative;
 }
 
 #pos-output {
+  height: 100px;
   overflow: auto;
   white-space: pre-wrap;
 }
@@ -60,4 +61,32 @@ html, body {
   border: 0;
   background-color: #eee;
   cursor: pointer;
+}
+
+#shape-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  margin: 0 0 0 10px;
+  border: 0;
+  color: #565656;
+
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11px;
+}
+
+.shape-option {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.shape-option:hover {
+  background-color: #eee;
+}
+
+.shape-option.selected {
+  font-weight: 500;
+  color: #000;
 }

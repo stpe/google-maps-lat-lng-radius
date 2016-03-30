@@ -9,16 +9,20 @@
   <body>
     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
 
+    <div id="shape-input" class="controls">
+      <div class="shape-option selected" data-geo-type="circle">Circle</div>
+      <div class="shape-option" data-geo-type="polygon">Polygon</div></div>
+
     <div id="output-container" class="controls">
       <button class="copybtn" data-clipboard-target="#pos-output"><img class="clippy" src="https://clipboardjs.com/assets/images/clippy.svg" width="12" alt="Copy to clipboard"></button>
       <div id="pos-output">Start by searching for the city...</div>
     </div>
+
     <div id="map"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
     <script src="js/gmaps-lat-lng-radius.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js" async defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHSePssVzJosEXQ0h1Qn6vUU1fMPxce4&libraries=places&callback=initMap"
-        async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap"></script>
     <!-- AIzaSyArHSePssVzJosEXQ0h1Qn6vUU1fMPxce4 -->
   </body>
 </html>
