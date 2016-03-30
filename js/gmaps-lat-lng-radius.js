@@ -47,10 +47,7 @@
         paths: getDefaultPolygon(startLoc),
         visible: false
       });
-
-      google.maps.event.addListener(polygon.getPath(), "insert_at", outputGeometry);
-      google.maps.event.addListener(polygon.getPath(), "remove_at", outputGeometry);
-      google.maps.event.addListener(polygon.getPath(), "set_at", outputGeometry);
+      polygonListeners();
 
       outputGeometry();
     });
@@ -72,6 +69,12 @@
 
   // have script loading invoke initMap
   window.initMap = initMap;
+
+  function polygonListeners() {
+    google.maps.event.addListener(polygon.getPath(), "insert_at", outputGeometry);
+    google.maps.event.addListener(polygon.getPath(), "remove_at", outputGeometry);
+    google.maps.event.addListener(polygon.getPath(), "set_at", outputGeometry);
+  }
 
   function outputGeometry() {
     var geo;
@@ -118,6 +121,7 @@
     circle.setRadius(DEFAULT_RADIUS);
 
     polygon.setPath(getDefaultPolygon(place.geometry.location));
+    polygonListeners();
 
     outputGeometry();
   }
