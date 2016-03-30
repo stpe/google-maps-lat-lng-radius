@@ -61,7 +61,7 @@
 
     var autocomplete = new google.maps.places.Autocomplete(input, { types: ["(cities)"] });
     autocomplete.bindTo("bounds", map);
-    autocomplete.addListener("place_changed", () => {
+    autocomplete.addListener("place_changed", function() {
       autocompletePlaceChanged(autocomplete.getPlace());
     });
 
