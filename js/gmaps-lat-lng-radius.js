@@ -59,7 +59,7 @@
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(output);
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(shapeInput);
 
-    var autocomplete = new google.maps.places.Autocomplete(input, { types: ["(cities)"] });
+    var autocomplete = new google.maps.places.Autocomplete(input, { types: ["geocode"] });
     autocomplete.bindTo("bounds", map);
     autocomplete.addListener("place_changed", function() {
       autocompletePlaceChanged(autocomplete.getPlace());
